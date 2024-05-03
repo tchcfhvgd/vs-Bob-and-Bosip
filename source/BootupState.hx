@@ -36,11 +36,8 @@ import openfl.Assets;
 import flash.geom.Point;
 import lime.app.Application;
 
-#if windows
-import Discord.DiscordClient;
 import Sys;
 import sys.FileSystem;
-#end
 
 #if cpp
 import sys.thread.Thread;
@@ -76,8 +73,8 @@ class BootupState extends MusicBeatState
 		#end*/
 		
 		#if sys
-		if (!sys.FileSystem.exists(Sys.getCwd() + "/assets/replays"))
-			sys.FileSystem.createDirectory(Sys.getCwd() + "/assets/replays");
+		if (!sys.FileSystem.exists("/assets/replays"))
+			sys.FileSystem.createDirectory("/assets/replays");
 		#end
 
 		@:privateAccess
