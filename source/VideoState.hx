@@ -60,5 +60,4 @@ class VideoState extends MusicBeatState
 		if (controls.ACCEPT && video.isPlaying)
 			video.onEndReached.dispatch();
 	}
-	#end
 }
