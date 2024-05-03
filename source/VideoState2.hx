@@ -8,7 +8,7 @@ import flixel.util.FlxTimer;
 
 import hxvlc.flixel.FlxVideo;
 
-class VideoState extends MusicBeatState
+class VideoState2 extends MusicBeatState
 {
 	var leSource:String;
 	var transClass:FlxState;
