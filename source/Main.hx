@@ -12,9 +12,7 @@ import openfl.Lib;
 import openfl.display.FPS;
 import openfl.display.Sprite;
 import openfl.events.Event;
-#if cpp
-import webm.WebmPlayer;
-#end
+
 
 class Main extends Sprite
 {
@@ -64,60 +62,19 @@ class Main extends Sprite
 
 	private function setupGame():Void
 	{
-		var stageWidth:Int = Lib.current.stage.stageWidth;
-		var stageHeight:Int = Lib.current.stage.stageHeight;
-
-		if (zoom == -1)
-		{
-			var ratioX:Float = stageWidth / gameWidth;
-			var ratioY:Float = stageHeight / gameHeight;
-			zoom = Math.min(ratioX, ratioY);
-			gameWidth = Math.ceil(stageWidth / zoom);
-			gameHeight = Math.ceil(stageHeight / zoom);
-		}
-
 		/*#if !debug
 		initialState = TitleState;
 		#end*/
 
-		game = new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen);
+		game = new FlxGame(gameWidth, gameHeight, initialState, framerate, framerate, skipSplash, startFullscreen);
 
 		addChild(game);
-		
-		var ourSource:String = "assets/videos/DO NOT DELETE OR GAME WILL CRASH/dontDelete.webm";
-			
-		#if web
-		var str1:String = "HTML CRAP";
-		var vHandler = new VideoHandler();
-		vHandler.init1();
-		vHandler.video.name = str1;
-		addChild(vHandler.video);
-		vHandler.init2();
-		GlobalVideo.setVid(vHandler);
-		vHandler.source(ourSource);
-		#elseif desktop
-		var str1:String = "WEBM SHIT"; 
-		var webmHandle = new WebmHandler();
-		webmHandle.source(ourSource);
-		webmHandle.makePlayer();
-		webmHandle.webm.name = str1;
-		#if !desktop
-		WebmPlayer.SKIP_STEP_LIMIT = 90;
-		#end
-		addChild(webmHandle.webm);
-		GlobalVideo.setWebm(webmHandle);
-		#end
 
-		#if !mobile
 		addChild(new FPS(10, 3, 0xFFFFFF));
-		#end
 
-		#if !mobile
 		fpsCounter = new FPS(10, 3, 0xFFFFFF);
 		addChild(fpsCounter);
 		toggleFPS(FlxG.save.data.fps);
-
-		#end
 	}
 
 	var game:FlxGame;
