@@ -62,6 +62,15 @@ class Main extends Sprite
 
 	private function setupGame():Void
 	{
+		#if android
+		if (VERSION.SDK_INT > 30)
+			Sys.setCwd(Path.addTrailingSlash(Context.getObbDir()));
+		else
+			Sys.setCwd(Path.addTrailingSlash(Context.getExternalFilesDir()));
+		#elseif ios
+		Sys.setCwd(System.documentsDirectory);
+		#end
+		
 		/*#if !debug
 		initialState = TitleState;
 		#end*/
