@@ -16,7 +16,7 @@ class VideoState2 extends MusicBeatState
 
 	var video:FlxVideo;
 
-	public function new(source:String, toTrans:FlxState):Void
+	public function new(source:String, toTrans:Void->Void)
 	{
 		super();
 
