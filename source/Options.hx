@@ -411,7 +411,7 @@ class FPSCapOption extends Option
 			(cast (Lib.current.getChildAt(0), Main)).setFPSCap(290);
 		}
 		else
-			FlxG.save.data.fpsCap = FlxG.save.data.fpsCap + 10;
+			FlxG.save.data.fpsCap = FlxG.save.data.fpsCap;
 		(cast (Lib.current.getChildAt(0), Main)).setFPSCap(FlxG.save.data.fpsCap);
 
 		return true;
@@ -421,9 +421,9 @@ class FPSCapOption extends Option
 		if (FlxG.save.data.fpsCap > 290)
 			FlxG.save.data.fpsCap = 290;
 		else if (FlxG.save.data.fpsCap < 60)
-			FlxG.save.data.fpsCap = Application.current.window.displayMode.refreshRate;
+			FlxG.save.data.fpsCap = 60;
 		else
-			FlxG.save.data.fpsCap = FlxG.save.data.fpsCap - 10;
+			FlxG.save.data.fpsCap = FlxG.save.data.fpsCap;
 		(cast (Lib.current.getChildAt(0), Main)).setFPSCap(FlxG.save.data.fpsCap);
 		return true;
 	}
