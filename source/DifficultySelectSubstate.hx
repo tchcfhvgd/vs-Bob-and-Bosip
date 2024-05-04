@@ -15,7 +15,7 @@ import flixel.tweens.FlxEase;
 import openfl.display.Shader;
 import flixel.tweens.FlxTween;
 import openfl.geom.Point;
-import lime.utils.Assets;
+import openfl.utils.Assets;
 import LoadingState.LoadingsState;
 import flixel.addons.transition.FlxTransitionableState;
 
@@ -30,8 +30,8 @@ class DifficultySelectSubstate extends MusicBeatSubstate
 {
 	var bg:FlxSprite;
 
-	var hasEX:Bool = false;
-	var hasRegular:Bool = false;
+	var hasEX:Bool = true;
+	var hasRegular:Bool = true;
 	var song:String;
 
 	var easy:FlxSprite;
@@ -71,8 +71,6 @@ class DifficultySelectSubstate extends MusicBeatSubstate
 		if (Assets.exists(Paths.instEXcheck(song))) 
 			hasEX = true;
 
-		trace(hasRegular);
-		trace(hasEX);
 		//ex = new FlxSprite();
 		//exText = new FlxSprite();
 
@@ -132,39 +130,8 @@ class DifficultySelectSubstate extends MusicBeatSubstate
 				exText = new FlxSprite(851, 477).loadGraphic(Paths.image('freeplay/exLocked'));
 			add(exText);
 
-		} else if (hasRegular) {
-			easy = new FlxSprite().makeGraphic(427, 720, FlxColor.BLACK);
-			easy.alpha = 0;
-			add(easy);
-			normal = new FlxSprite(427).makeGraphic(427, 720, FlxColor.BLACK);
-			normal.alpha = 0;
-			add(normal);
-			hard = new FlxSprite(854).makeGraphic(427, 720, FlxColor.BLACK);
-			hard.alpha = 0;
-			add(hard);
-
-			easyText = new FlxSprite(88, 310).loadGraphic(Paths.image('storymenu/easyText'));
-			add(easyText);
-			normalText = new FlxSprite(465, 303).loadGraphic(Paths.image('storymenu/normalText'));
-			add(normalText);
-			hardText = new FlxSprite(960, 303).loadGraphic(Paths.image('storymenu/hardText'));
-			add(hardText);
-		} else if (!hasRegular && hasEX) {
-			ex = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-			ex.alpha = 0;
-			add(ex);
-
-			exText = new FlxSprite(851, 477).loadGraphic(Paths.image('freeplay/exUnlocked'));
-			
-			if (!FlxG.save.data.unlockedEX)
-				exText = new FlxSprite(851, 477).loadGraphic(Paths.image('freeplay/exLocked'));
-
-			exText.screenCenter();
-			add(exText);
 		}
 		
-		
-
 		bobmadshake = new FlxSprite( -198, -118).loadGraphic(Paths.image('storymenu/bobscreen'));
 		bobmadshake.scrollFactor.set(0, 0);
 		bobmadshake.visible = false;
@@ -302,7 +269,7 @@ class DifficultySelectSubstate extends MusicBeatSubstate
 		bobsound.play();
 		bobsound.volume = 1;
 		shakescreen();
-		Lib.application.window.fullscreen = false;
+		Lib.application.window.fullscreen = true;
 		new FlxTimer().start(0.5, function(tmr:FlxTimer)
 		{
 			resetBobismad();
