@@ -6800,8 +6800,8 @@ class PlayState extends MusicBeatState
 				switch (curStep) {
 					case 1535:
 						
-	/*		makeBackgroundTheVideo("assets/videos/space.webm");
-	*/
+		//makeBackgroundTheVideo("assets/videos/space.webm");
+	
 				}
 				else 
 					switch (curStep) {
