@@ -191,12 +191,6 @@ class PauseSubState extends MusicBeatSubstate
 					FlxG.resetState();
 					
 				case "Exit to menu":
-					if (PlayState.instance.useVideo)
-					{
-						GlobalVideo.get().stop();
-						PlayState.instance.remove(PlayState.instance.videoSprite);
-						PlayState.instance.removedVideo = true;
-					}
 
 					if(PlayState.loadRep)
 					{
