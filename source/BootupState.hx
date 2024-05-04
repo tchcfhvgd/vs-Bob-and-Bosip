@@ -54,6 +54,8 @@ class BootupState extends MusicBeatState
 
 	override public function create():Void
 	{
+		FlxG.game.focusLostFramerate = 60;
+		
 		/*#if polymod
 		var errors = (error:PolymodError) ->
 		{
