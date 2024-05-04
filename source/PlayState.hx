@@ -2830,8 +2830,10 @@ class PlayState extends MusicBeatState
 
 	function startSong():Void
 	{
+		/*
 		if (useVideo && !FlxG.save.data.lowDetail)
 			BackgroundVideo.get().resume();
+			*/
 
 		startingSong = false;
 		songStarted = true;
@@ -3450,6 +3452,7 @@ class PlayState extends MusicBeatState
 		if (FlxG.save.data.botplay && FlxG.keys.justPressed.ONE)
 			camHUD.visible = !camHUD.visible;
 
+		/*
 		if (useVideo && BackgroundVideo.get() != null && !stopUpdate && !FlxG.save.data.lowDetail)
 		{
 			if (BackgroundVideo.get().ended && !removedVideo)
@@ -3461,6 +3464,7 @@ class PlayState extends MusicBeatState
 				useVideo = false;
 			}
 		}
+		*/
 		#if windows
 		if (executeModchart && luaModchart != null && songStarted)
 		{
@@ -3614,6 +3618,7 @@ class PlayState extends MusicBeatState
 		if (FlxG.keys.justPressed.SEVEN)
 		{
 			
+			*/
 			if (useVideo && !FlxG.save.data.lowDetail)
 				{
 					BackgroundVideo.get().stop();
@@ -3624,6 +3629,7 @@ class PlayState extends MusicBeatState
 					#end
 					removedVideo = true;
 				}
+				*/
 			#if windows
 			DiscordClient.changePresence("Chart Editor", null, null, true);
 			#end
@@ -3689,6 +3695,7 @@ class PlayState extends MusicBeatState
 	//	#if debug
 		if (FlxG.keys.justPressed.EIGHT)
 		{
+			/*
 			if (useVideo && !FlxG.save.data.lowDetail)
 			{
 				BackgroundVideo.get().stop();
@@ -3697,6 +3704,7 @@ class PlayState extends MusicBeatState
 				FlxG.stage.window.onFocusIn.remove(focusIn);
 				removedVideo = true;
 			}
+			*/
 
 			FlxG.switchState(new AnimationDebug(SONG.player2));
 			#if windows
@@ -4873,8 +4881,11 @@ class PlayState extends MusicBeatState
 							case 'ready':
 								switch (SONG.song.toLowerCase()) {
 									case 'ronald mcdonald slide':
-										if (!FlxG.save.data.lowDetail)
+										
+									
+							/*	if (!FlxG.save.data.lowDetail)
 											backgroundVideo("assets/videos/stop_posting_about_among_us.webm");
+											*/
 
 										remove(dad);
 										dad = new Character(-50, 109, 'abungus', false, true);
@@ -4893,11 +4904,13 @@ class PlayState extends MusicBeatState
 										iconP2.visible = false;
 										iconP1.visible = false;
 									case 'jump-out':
-										if(storyDifficulty != 3 && !FlxG.save.data.lowDetail) {
+										
+				/*				if(storyDifficulty != 3 && !FlxG.save.data.lowDetail) {
 											backgroundVideo("assets/videos/sandwitch.webm");
 										} else if (!FlxG.save.data.lowDetail) {
 											backgroundVideo("assets/videos/Bagel.webm");	
 										}
+										*/
 									default:
 										
 										if (FlxG.save.data.flashing && !FlxG.save.data.lowDetail) {
@@ -4917,6 +4930,7 @@ class PlayState extends MusicBeatState
 								switch (SONG.song.toLowerCase()) {
 									case 'ronald mcdonald slide':
 										if (useVideo && !FlxG.save.data.lowDetail)
+	/*		
 										{
 											BackgroundVideo.get().stop();
 											FlxG.stage.window.onFocusOut.remove(focusOut);
@@ -4924,6 +4938,7 @@ class PlayState extends MusicBeatState
 											PlayState.instance.remove(PlayState.instance.videoSprite);
 											useVideo = false;
 										}
+										*/
 										waaaa.visible = false;
 										dadShouldIdle = true;
 										unregisteredHypercam.visible = false;
@@ -4965,7 +4980,8 @@ class PlayState extends MusicBeatState
 										}
 									case 'jump-out':
 										if(storyDifficulty != 3){
-										if (useVideo && !FlxG.save.data.lowDetail)
+										
+							/*			if (useVideo && !FlxG.save.data.lowDetail)
 										{
 											BackgroundVideo.get().stop();
 											FlxG.stage.window.onFocusOut.remove(focusOut);
@@ -4973,6 +4989,7 @@ class PlayState extends MusicBeatState
 											PlayState.instance.remove(PlayState.instance.videoSprite);
 											useVideo = false;
 										}
+	 */
 										dad.playAnim('idle');
 										if (dad.curCharacter != 'gloopy') {
 											remove(dad);
@@ -5004,7 +5021,8 @@ class PlayState extends MusicBeatState
 										}
 										}
 										else {
-											if (useVideo && !FlxG.save.data.lowDetail)
+											
+								/*			if (useVideo && !FlxG.save.data.lowDetail)
 												{
 													BackgroundVideo.get().stop();
 													FlxG.stage.window.onFocusOut.remove(focusOut);
@@ -5012,6 +5030,7 @@ class PlayState extends MusicBeatState
 													PlayState.instance.remove(PlayState.instance.videoSprite);
 													useVideo = false;
 												}
+												*/
 												dad.playAnim('idle');
 												if (dad.curCharacter != 'gloopy-ex') {
 													remove(dad);
@@ -5058,7 +5077,8 @@ class PlayState extends MusicBeatState
 								switch (SONG.song.toLowerCase()) {
 									case 'ronald mcdonald slide':
 										if(storyDifficulty != 3 && !FlxG.save.data.lowDetail){
-										if (useVideo && !FlxG.save.data.lowDetail)
+										
+						/*			if (useVideo && !FlxG.save.data.lowDetail)
 										{
 											BackgroundVideo.get().stop();
 											FlxG.stage.window.onFocusOut.remove(focusOut);
@@ -5066,6 +5086,7 @@ class PlayState extends MusicBeatState
 											PlayState.instance.remove(PlayState.instance.videoSprite);
 											useVideo = false;
 										}
+										*/
 										healthBar.visible = true;
 										healthBarBG.visible = true;
 										iconP2.visible = true;
@@ -5086,9 +5107,11 @@ class PlayState extends MusicBeatState
 											trace(dad);
 										}
 									case 'jump-out':
-										if(storyDifficulty != 3 && !FlxG.save.data.lowDetail) {
+										
+						/*				if(storyDifficulty != 3 && !FlxG.save.data.lowDetail) {
 										backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
 										}
+										*/
 										else if(!FlxG.save.data.lowDetail) {
 											filters.push(ShadersHandler.scanline);
 											filteron = true;
@@ -5654,6 +5677,7 @@ class PlayState extends MusicBeatState
 	
 	function endSong():Void
 	{
+		/*
 		if (useVideo && !FlxG.save.data.lowDetail)
 		{
 			BackgroundVideo.get().stop();
@@ -5661,6 +5685,7 @@ class PlayState extends MusicBeatState
 			FlxG.stage.window.onFocusIn.remove(focusIn);
 			PlayState.instance.remove(PlayState.instance.videoSprite);
 		}
+		*/
 
 		if (!loadRep)
 			rep.SaveReplay(saveNotes);
@@ -6774,17 +6799,23 @@ class PlayState extends MusicBeatState
 				if(storyDifficulty != 3)
 				switch (curStep) {
 					case 1535:
-						makeBackgroundTheVideo("assets/videos/space.webm");
+						
+	/*		makeBackgroundTheVideo("assets/videos/space.webm");
+	*/
 				}
 				else 
 					switch (curStep) {
 						
 						case 18:
 							if (!FlxG.save.data.lowDetail)
-								backgroundVideo("assets/videos/ronsip.webm");
+								
+							/*	backgroundVideo("assets/videos/ronsip.webm");
+							*/
 						case 48: 
 							if (!FlxG.save.data.lowDetail)
-								BackgroundVideo.get().stop();
+								
+				/*				BackgroundVideo.get().stop();
+				*/
 
 							FlxG.stage.window.onFocusOut.remove(focusOut);
 							FlxG.stage.window.onFocusIn.remove(focusIn);
@@ -6822,10 +6853,13 @@ class PlayState extends MusicBeatState
 							add(dad);
 						case 848:
 							if (!FlxG.save.data.lowDetail)
-								backgroundVideo("assets/videos/num.webm");
+								
+							/*	backgroundVideo("assets/videos/num.webm");
+							^/
 						case 863: 
 							if (!FlxG.save.data.lowDetail)
-								BackgroundVideo.get().stop();
+								/*BackgroundVideo.get().stop();
+								^/
 
 							FlxG.stage.window.onFocusOut.remove(focusOut);
 							FlxG.stage.window.onFocusIn.remove(focusIn);
@@ -6858,11 +6892,14 @@ class PlayState extends MusicBeatState
 							trace(dad);
 						case 1776:
 							if (!FlxG.save.data.lowDetail)
-								backgroundVideo("assets/videos/screen.webm");
+								
+	/^	backgroundVideo("assets/videos/screen.webm");
+	*/
 						case 1904:
 							if (!FlxG.save.data.lowDetail)
-								BackgroundVideo.get().stop();
-
+								
+							/*	BackgroundVideo.get().stop();
+*/
 							FlxG.stage.window.onFocusOut.remove(focusOut);
 							FlxG.stage.window.onFocusIn.remove(focusIn);
 							PlayState.instance.remove(PlayState.instance.videoSprite);
@@ -6938,21 +6975,29 @@ class PlayState extends MusicBeatState
 				switch (curStep){
 					case 326:
 						if (!FlxG.save.data.lowDetail)
+							/^
 							backgroundVideo("assets/videos/pizza.webm");
+							^/
 					case 347:
 						if (!FlxG.save.data.lowDetail)
-							BackgroundVideo.get().stop();
+							
+						/*	BackgroundVideo.get().stop();
 
+*/
 						FlxG.stage.window.onFocusOut.remove(focusOut);
 						FlxG.stage.window.onFocusIn.remove(focusIn);
 						PlayState.instance.remove(PlayState.instance.videoSprite);
 						useVideo = false;
 					case 686:
 						if (!FlxG.save.data.lowDetail)
-							backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
+							
+						/^backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
+						*/
 					case 688:
 						if (!FlxG.save.data.lowDetail)
-							BackgroundVideo.get().stop();
+							
+						*/	BackgroundVideo.get().stop();
+						*/
 
 						FlxG.stage.window.onFocusOut.remove(focusOut);
 						FlxG.stage.window.onFocusIn.remove(focusIn);
@@ -6968,12 +7013,16 @@ class PlayState extends MusicBeatState
 						defaultCamZoom = 0.6;
 					case 812:
 						if (!FlxG.save.data.lowDetail)
-							backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
+							
+				*/			backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
+				*/
 
 						hellbg.visible = false;	
 					case  816:
 						if (!FlxG.save.data.lowDetail)
-							BackgroundVideo.get().stop();
+							
+						*/	BackgroundVideo.get().stop();
+						*/
 
 						FlxG.stage.window.onFocusOut.remove(focusOut);
 						FlxG.stage.window.onFocusIn.remove(focusIn);
@@ -6987,10 +7036,12 @@ class PlayState extends MusicBeatState
 						defaultCamZoom = 0.75;
 					case 943:
 						if (!FlxG.save.data.lowDetail)
+					/*		
 							backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
+							*/
 					case 944:
 						if (!FlxG.save.data.lowDetail)
-							BackgroundVideo.get().stop();
+							//BackgroundVideo.get().stop();
 
 						FlxG.stage.window.onFocusOut.remove(focusOut);
 						FlxG.stage.window.onFocusIn.remove(focusIn);
@@ -7001,10 +7052,10 @@ class PlayState extends MusicBeatState
 					case 1072: 
 						//WaterMelon
 						if (!FlxG.save.data.lowDetail)
-							backgroundVideo("assets/videos/watermelon.webm");
+							//backgroundVideo("assets/videos/watermelon.webm");
 					case 1088:
 						if (!FlxG.save.data.lowDetail)
-							BackgroundVideo.get().stop();
+							//BackgroundVideo.get().stop();
 
 						FlxG.stage.window.onFocusOut.remove(focusOut);
 						FlxG.stage.window.onFocusIn.remove(focusIn);
@@ -7088,6 +7139,7 @@ class PlayState extends MusicBeatState
 		// nada
 	}
 
+	/*
 	public function backgroundVideo(source:String) // for background videos
 	{
 		#if cpp
@@ -7146,7 +7198,10 @@ class PlayState extends MusicBeatState
 			webmHandler.resume();
 		#end
 	}
+	*/
 
+	
+	/*
 	public function makeBackgroundTheVideo(source:String) // for background videos
 	{
 		#if cpp
@@ -7205,6 +7260,7 @@ class PlayState extends MusicBeatState
 			webmHandler.resume();
 		#end
 	}
+	*/
 
 	override function beatHit()
 	{
@@ -7303,7 +7359,7 @@ class PlayState extends MusicBeatState
 				if(storyDifficulty != 3 && !FlxG.save.data.lowDetail) {
 				switch (curBeat) {
 					case 209:
-						backgroundVideo("assets/videos/PP_by_AmorAltra__BoomKitty_Geometry_dash.webm");
+						//backgroundVideo("assets/videos/PP_by_AmorAltra__BoomKitty_Geometry_dash.webm");
 				}
 			}
 			
