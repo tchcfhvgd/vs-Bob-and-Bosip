@@ -23,10 +23,6 @@ import flixel.system.frontEnds.SoundFrontEnd;
 import Discord.DiscordClient;
 #end
 
-#if cpp
-import webm.WebmPlayer;
-#end
-
 using StringTools;
 
 class StoryMenuState extends MusicBeatState
