@@ -6883,7 +6883,7 @@ class PlayState extends MusicBeatState
 							grpIcons.add(iconP2);
 							trace(dad);
 						case 1776:
-							if (!FlxG.save.data.lowDetail)
+							//if (!FlxG.save.data.lowDetail)
 								
 	//backgroundVideo("assets/videos/screen.webm");
 						case 1904:
