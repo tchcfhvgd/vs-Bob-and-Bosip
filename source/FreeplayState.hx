@@ -807,7 +807,7 @@ class FreeplayState extends MusicBeatState
 				iconArray.splice(i, i);
 			}
 
-			generateSongText(true, true);
+			generateSongText(true);
 			if (curSelected >= realLength)
 				curSelected = 1;
 			inEX = true;
