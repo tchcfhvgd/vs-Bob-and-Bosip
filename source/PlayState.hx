@@ -3618,7 +3618,7 @@ class PlayState extends MusicBeatState
 		if (FlxG.keys.justPressed.SEVEN)
 		{
 			
-			*/
+			/*
 			if (useVideo && !FlxG.save.data.lowDetail)
 				{
 					BackgroundVideo.get().stop();
