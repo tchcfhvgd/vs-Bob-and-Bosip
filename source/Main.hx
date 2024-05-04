@@ -5,6 +5,7 @@ import openfl.text.TextFormat;
 import openfl.display.Application;
 import flixel.util.FlxColor;
 import flixel.FlxG;
+import haxe.io.Path;
 import flixel.FlxGame;
 import flixel.FlxState;
 import openfl.Assets;
