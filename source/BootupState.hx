@@ -127,8 +127,8 @@ class BootupState extends MusicBeatState
 		{
 			LoadingState.loadAndSwitchState(new VideoState2("assets/videos/desktop.webm", function() {
 				FlxG.switchState(new DesktopState());
-			}, 2000));
-		});
+			}));
+		},2000);
 	}
 
 	override function update(elapsed:Float)
