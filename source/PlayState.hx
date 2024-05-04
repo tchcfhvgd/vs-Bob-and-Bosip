@@ -6846,11 +6846,11 @@ class PlayState extends MusicBeatState
 							add(gf);
 							add(dad);
 						case 848:
-							if (!FlxG.save.data.lowDetail)
+							//if (!FlxG.save.data.lowDetail)
 								
 							//backgroundVideo("assets/videos/num.webm");
 						case 863: 
-							if (!FlxG.save.data.lowDetail)
+							//if (!FlxG.save.data.lowDetail)
 								//BackgroundVideo.get().stop();
 
 							FlxG.stage.window.onFocusOut.remove(focusOut);
@@ -7000,17 +7000,17 @@ class PlayState extends MusicBeatState
 						add(dad);
 						defaultCamZoom = 0.6;
 					case 812:
-						if (!FlxG.save.data.lowDetail)
+						//if (!FlxG.save.data.lowDetail)
 							
-				*/			backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
-				*/
+						//backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
+				
 
 						hellbg.visible = false;	
 					case  816:
-						if (!FlxG.save.data.lowDetail)
+						//if (!FlxG.save.data.lowDetail)
 							
-						*/	BackgroundVideo.get().stop();
-						*/
+						//BackgroundVideo.get().stop();
+						
 
 						FlxG.stage.window.onFocusOut.remove(focusOut);
 						FlxG.stage.window.onFocusIn.remove(focusIn);
@@ -7023,12 +7023,12 @@ class PlayState extends MusicBeatState
 						add(dad);
 						defaultCamZoom = 0.75;
 					case 943:
-						if (!FlxG.save.data.lowDetail)
-					/*		
-							backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
-							*/
+						//if (!FlxG.save.data.lowDetail)
+						
+							//backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
+							
 					case 944:
-						if (!FlxG.save.data.lowDetail)
+						//if (!FlxG.save.data.lowDetail)
 							//BackgroundVideo.get().stop();
 
 						FlxG.stage.window.onFocusOut.remove(focusOut);
@@ -7039,10 +7039,10 @@ class PlayState extends MusicBeatState
 						crabbg.visible = true;
 					case 1072: 
 						//WaterMelon
-						if (!FlxG.save.data.lowDetail)
+						//if (!FlxG.save.data.lowDetail)
 							//backgroundVideo("assets/videos/watermelon.webm");
 					case 1088:
-						if (!FlxG.save.data.lowDetail)
+						//if (!FlxG.save.data.lowDetail)
 							//BackgroundVideo.get().stop();
 
 						FlxG.stage.window.onFocusOut.remove(focusOut);
