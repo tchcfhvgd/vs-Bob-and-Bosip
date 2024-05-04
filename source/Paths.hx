@@ -4,6 +4,8 @@ import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.utils.AssetType;
 import flash.media.Sound;
+import openfl.system.System;
+import lime.utils.Assets;
 import flixel.graphics.FlxGraphic;
 import openfl.utils.Assets as OpenFlAssets;
 
