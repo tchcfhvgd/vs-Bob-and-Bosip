@@ -27,7 +27,7 @@ class VideoState2 extends MusicBeatState
 		FlxG.sound.music.volume = 0;
 
 		leSource = source;
-		transClass = toTrans;
+		//transClass = toTrans;
 	}
 	
 	override function create():Void
