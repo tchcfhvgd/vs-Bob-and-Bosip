@@ -3,6 +3,7 @@ package;
 import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.utils.AssetType;
+import flash.media.Sound;
 import flixel.graphics.FlxGraphic;
 import openfl.utils.Assets as OpenFlAssets;
 
