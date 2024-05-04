@@ -7297,7 +7297,6 @@ class PlayState extends MusicBeatState
 			{
 				shadersLoaded = true;
 				filters.push(ShadersHandler.chromaticAberration);
-				filters.push(ShadersHandler.radialBlur);
 			}
 		if (!FlxG.save.data.lowDetail) {
 			switch (SONG.song.toLowerCase()) {
