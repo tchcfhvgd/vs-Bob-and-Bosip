@@ -5108,10 +5108,10 @@ class PlayState extends MusicBeatState
 										}
 									case 'jump-out':
 										
-						/*				if(storyDifficulty != 3 && !FlxG.save.data.lowDetail) {
-										backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
+								if(storyDifficulty != 3 && !FlxG.save.data.lowDetail) {
+										//backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
 										}
-										*/
+									
 										else if(!FlxG.save.data.lowDetail) {
 											filters.push(ShadersHandler.scanline);
 											filteron = true;
