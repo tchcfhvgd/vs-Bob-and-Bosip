@@ -12,19 +12,19 @@ class DirectionalBlur extends FlxShader
 	@:glFragmentSource('
 	
 		#pragma header
-			uniform float angle = 90.0;
-			uniform float strength = 0.01;
-	vec4 color = texture2D(bitmap, openfl_TextureCoordv);
+			uniform float angle;
+			uniform float strength;
+	
 	//looks good @50, can go pretty high tho
-			vec2 uv = openfl_TextureCoordv.xy;
+			
 			
 		const int samples = 20;
 
 
 		void main()
 		{
-			
-			
+			vec4 color = texture2D(bitmap, openfl_TextureCoordv);
+			vec2 uv = openfl_TextureCoordv.xy;
 			
 			float r = radians(angle);
 			vec2 direction = vec2(sin(r), cos(r));
@@ -54,6 +54,8 @@ class DirectionalBlur extends FlxShader
 	public function new() 
 	{
 		super();
+		angle.value = [90.0];
+		strength.value = [0.01];
 	}
 	
 }
