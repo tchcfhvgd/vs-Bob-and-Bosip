@@ -12,7 +12,8 @@ class RadialBlur extends FlxShader
 	@:glFragmentSource('
 		#pragma header
 
-	uniform float cx;
+	#define texture flixel_texture2D
+        uniform float cx;
 	uniform float cy;
         uniform float blurWidth;
 	
