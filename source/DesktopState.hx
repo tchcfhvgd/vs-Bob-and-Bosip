@@ -757,7 +757,7 @@ class DesktopState extends MusicBeatState
 									}
 							}
 							
-							if (FileSystem.exists(Paths.instEXcheck(i))) {
+							if (Assets.exists(Paths.instEXcheck(i))) {
 								theText += '&-& %ex% &score:& %' + Highscore.getScore(songHighscore, 3) + '%\n';
 								if (Highscore.getMissesString(songHighscore, 3) == '0')
 									theText += '&-& %ex% &misses:& *Perfect!*\n';
