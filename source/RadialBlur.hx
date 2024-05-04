@@ -12,9 +12,9 @@ class RadialBlur extends FlxShader
 	@:glFragmentSource('
 		#pragma header
 
-	uniform float cx = 0.0;
-	uniform float cy = 0.0;
-    uniform float blurWidth = 10.0;
+	uniform float cx;
+	uniform float cy;
+        uniform float blurWidth;
 	
 	const int nsamples = 30;
 	
@@ -49,7 +49,9 @@ class RadialBlur extends FlxShader
 	{
 		super();
 		
-		
+		cx.value = [0.0];
+		cy.value = [0.0];
+	        blurWidth.value = [10.0];
 	}
 	
 }
