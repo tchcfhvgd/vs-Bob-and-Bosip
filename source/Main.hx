@@ -9,6 +9,7 @@ import haxe.io.Path;
 import flixel.FlxGame;
 import flixel.FlxState;
 import openfl.Assets;
+import cpp.vm.Gc;
 import openfl.Lib;
 import openfl.display.FPS;
 import openfl.display.Sprite;
@@ -86,11 +87,14 @@ class Main extends Sprite
 
 		FlxG.signals.preStateSwitch.add(function () {
 			if (!Main.skipNextDump) {
-				Paths.clearStoredMemory();
+				Paths.clearStoredMemory(true);
+				FlxG.bitmap.dumpCache();
 			}
+			clearMajor();
 		});
 		FlxG.signals.postStateSwitch.add(function () {
 			Paths.clearUnusedMemory();
+			clearMajor();
 			Main.skipNextDump = false;
 		});
 		
@@ -127,5 +131,9 @@ class Main extends Sprite
 	public function getFPS():Float
 	{
 		return fpsCounter.currentFPS;
+	}
+	public static function clearMajor() {
+		Gc.run(true);
+		Gc.compact();
 	}
 }
