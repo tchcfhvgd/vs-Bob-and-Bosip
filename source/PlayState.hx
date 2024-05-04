@@ -6806,12 +6806,8 @@ class PlayState extends MusicBeatState
 				else 
 					switch (curStep) {
 						
-						case 18:
-							if (!FlxG.save.data.lowDetail)
-								
-							//backgroundVideo("assets/videos/ronsip.webm");
 						case 48: 
-							if (!FlxG.save.data.lowDetail)
+							//if (!FlxG.save.data.lowDetail)
 								
 				//BackgroundVideo.get().stop();
 
@@ -6891,7 +6887,7 @@ class PlayState extends MusicBeatState
 								
 	//backgroundVideo("assets/videos/screen.webm");
 						case 1904:
-							if (!FlxG.save.data.lowDetail)
+							//if (!FlxG.save.data.lowDetail)
 								
 							//BackgroundVideo.get().stop();
 							FlxG.stage.window.onFocusOut.remove(focusOut);
@@ -6968,12 +6964,12 @@ class PlayState extends MusicBeatState
 				if(storyDifficulty == 3)
 				switch (curStep){
 					case 326:
-						if (!FlxG.save.data.lowDetail)
+						//if (!FlxG.save.data.lowDetail)
 							
 							//backgroundVideo("assets/videos/pizza.webm");
 							
 					case 347:
-						if (!FlxG.save.data.lowDetail)
+						//if (!FlxG.save.data.lowDetail)
 							
 						//BackgroundVideo.get().stop();
 						FlxG.stage.window.onFocusOut.remove(focusOut);
@@ -6981,12 +6977,12 @@ class PlayState extends MusicBeatState
 						PlayState.instance.remove(PlayState.instance.videoSprite);
 						useVideo = false;
 					case 686:
-						if (!FlxG.save.data.lowDetail)
+						//if (!FlxG.save.data.lowDetail)
 							
 						//backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
 						
 					case 688:
-						if (!FlxG.save.data.lowDetail)
+						//if (!FlxG.save.data.lowDetail)
 							
 						//BackgroundVideo.get().stop();
 						
