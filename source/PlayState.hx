@@ -1074,17 +1074,7 @@ class PlayState extends MusicBeatState
 					{
 						defaultCamZoom = 0.75;
 						curStage = 'sunsuck';
-						if (Assets.exists(Paths.txt("ronald mcdonald slide/preload" + suf)))
-							{
-								var characters:Array<String> = CoolUtil.preloadfile(Paths.txt("ronald mcdonald slide/preload" + suf));
-								trace('Load Assets');
-								for (i in 0...characters.length)
-								{
-									var data:Array<String> = characters[i].split(' ');
-									dad = new Character (0, 0, data[0]);
-									trace ('found ' + data[0]);
-								}
-							}
+				
 						grpDieStage = new FlxTypedGroup<FlxSprite>();
 						add(grpDieStage);
 
@@ -1669,20 +1659,6 @@ class PlayState extends MusicBeatState
 			default:
 				gfVersion = 'gf';
 		}
-		if (Assets.exists(Paths.txt(SONG.song.toLowerCase() + "/preload" + suf)))
-			{
-				var characters:Array<String> = CoolUtil.preloadfile(Paths.txt(SONG.song.toLowerCase() + "/preload" + suf));
-				trace('Load Assets');
-				for (i in 0...characters.length)
-				{
-					var data:Array<String> = characters[i].split(' ');
-					dad = new Character (0, 0, data[0]);
-					trace ('found ' + data[0]);
-				}
-			}
-		
-		
-
 
 		gf = new Character(400, 130, gfVersion);
 		gf.scrollFactor.set(0.95, 0.95);
@@ -7296,7 +7272,6 @@ class PlayState extends MusicBeatState
 		if (curBeat > 0 && !shadersLoaded)
 			{
 				shadersLoaded = true;
-				filters.push(ShadersHandler.chromaticAberration);
 			}
 		if (!FlxG.save.data.lowDetail) {
 			switch (SONG.song.toLowerCase()) {
