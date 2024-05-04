@@ -11,7 +11,7 @@ import hxvlc.flixel.FlxVideo;
 class VideoState2 extends MusicBeatState
 {
 	var leSource:String;
-	var transClass:FlxState;
+	public var transFunction:Void->Void;
 	var fuckingVolume:Float = 1;
 
 	var video:FlxVideo;
@@ -27,7 +27,7 @@ class VideoState2 extends MusicBeatState
 		FlxG.sound.music.volume = 0;
 
 		leSource = source;
-		//transClass = toTrans;
+		transFunction = toTrans;
 	}
 	
 	override function create():Void
@@ -41,7 +41,7 @@ class VideoState2 extends MusicBeatState
 
 			FlxG.autoPause = true;
 			FlxG.sound.music.volume = fuckingVolume;
-			FlxG.switchState(transClass);
+			//FlxG.switchState(transClass);
 		});
 		video.load(leSource);
 
