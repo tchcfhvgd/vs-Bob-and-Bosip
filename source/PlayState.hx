@@ -6809,13 +6809,11 @@ class PlayState extends MusicBeatState
 						case 18:
 							if (!FlxG.save.data.lowDetail)
 								
-							/*	backgroundVideo("assets/videos/ronsip.webm");
-							*/
+							//backgroundVideo("assets/videos/ronsip.webm");
 						case 48: 
 							if (!FlxG.save.data.lowDetail)
 								
-				/*				BackgroundVideo.get().stop();
-				*/
+				//BackgroundVideo.get().stop();
 
 							FlxG.stage.window.onFocusOut.remove(focusOut);
 							FlxG.stage.window.onFocusIn.remove(focusIn);
@@ -6854,12 +6852,10 @@ class PlayState extends MusicBeatState
 						case 848:
 							if (!FlxG.save.data.lowDetail)
 								
-							/*	backgroundVideo("assets/videos/num.webm");
-							^/
+							//backgroundVideo("assets/videos/num.webm");
 						case 863: 
 							if (!FlxG.save.data.lowDetail)
-								/*BackgroundVideo.get().stop();
-								^/
+								//BackgroundVideo.get().stop();
 
 							FlxG.stage.window.onFocusOut.remove(focusOut);
 							FlxG.stage.window.onFocusIn.remove(focusIn);
@@ -6893,13 +6889,11 @@ class PlayState extends MusicBeatState
 						case 1776:
 							if (!FlxG.save.data.lowDetail)
 								
-	/^	backgroundVideo("assets/videos/screen.webm");
-	*/
+	//backgroundVideo("assets/videos/screen.webm");
 						case 1904:
 							if (!FlxG.save.data.lowDetail)
 								
-							/*	BackgroundVideo.get().stop();
-*/
+							//BackgroundVideo.get().stop();
 							FlxG.stage.window.onFocusOut.remove(focusOut);
 							FlxG.stage.window.onFocusIn.remove(focusIn);
 							PlayState.instance.remove(PlayState.instance.videoSprite);
@@ -6975,15 +6969,13 @@ class PlayState extends MusicBeatState
 				switch (curStep){
 					case 326:
 						if (!FlxG.save.data.lowDetail)
-							/^
-							backgroundVideo("assets/videos/pizza.webm");
-							^/
+							
+							//backgroundVideo("assets/videos/pizza.webm");
+							
 					case 347:
 						if (!FlxG.save.data.lowDetail)
 							
-						/*	BackgroundVideo.get().stop();
-
-*/
+						//BackgroundVideo.get().stop();
 						FlxG.stage.window.onFocusOut.remove(focusOut);
 						FlxG.stage.window.onFocusIn.remove(focusIn);
 						PlayState.instance.remove(PlayState.instance.videoSprite);
@@ -6991,13 +6983,13 @@ class PlayState extends MusicBeatState
 					case 686:
 						if (!FlxG.save.data.lowDetail)
 							
-						/^backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
-						*/
+						//backgroundVideo("assets/videos/TV static noise HD 1080p.webm");
+						
 					case 688:
 						if (!FlxG.save.data.lowDetail)
 							
-						*/	BackgroundVideo.get().stop();
-						*/
+						//BackgroundVideo.get().stop();
+						
 
 						FlxG.stage.window.onFocusOut.remove(focusOut);
 						FlxG.stage.window.onFocusIn.remove(focusIn);
