@@ -132,7 +132,7 @@ class MusicPlayerSubstate extends MusicBeatSubstate
 		{
 			var data:Array<String> = initSonglist[i].split(':');
 			if (unlockedSongs[i]) {
-				if (FileSystem.exists(Paths.instcheck(data[0]))) {
+				if (Assets.exists(Paths.instcheck(data[0]))) {
 					songsToPlay.push(Paths.inst(data[0]));
 					songNames.push(data[0]);
 					var daJson = Song.loadFromJson(data[0].toLowerCase() + '-hard', data[0].toLowerCase());
@@ -141,7 +141,7 @@ class MusicPlayerSubstate extends MusicBeatSubstate
 					trace(daJson.bpm);
 					songLength++;
 				}
-				if (FlxG.save.data.unlockedEX && FileSystem.exists(Paths.instEXcheck(data[0]))) {
+				if (FlxG.save.data.unlockedEX && Assets.exists(Paths.instEXcheck(data[0]))) {
 					var daJson = Song.loadFromJson(data[0].toLowerCase() + '-ex', data[0].toLowerCase());
 					bpms.push(Std.int(daJson.bpm));
 					trace(daJson.bpm);
